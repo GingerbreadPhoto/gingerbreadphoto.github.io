@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(py -3 \"C:/Users/orsgl/AppData/Roaming/Claude/local-agent-mode-sessions/6082b410-e8b4-49cf-8025-260e6cead309/1f4fd09c-c1d5-4a7e-9cd1-1325775451ae/rpm/plugin_01PoTKyPJ4Xhcp69ZrC21tRY/.claude/skills/ui-ux-pro-max/scripts/search.py\" \"photography portfolio creative cinematic vibrant\" --design-system -p \"GP Cosplay Photography\")"
+    ]
+  }
+}

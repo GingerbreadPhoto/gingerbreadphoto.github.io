@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Booking — Gingerbread Photography</title>
+  <meta name="description" content="Book a cosplay shoot — convention sessions, private commissions, and event coverage. Tell me your character and let's plan it.">
+
+  <link rel="icon" type="image/x-icon" href="Assets/images/logo/cropped-square-icon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ======================= HEADER / NAV ======================= -->
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Main navigation">
+      <a class="brand" href="index.html">
+        <img class="brand__logo" src="Assets/images/logo/cropped-square-icon-orange.png" alt="Gingerbread Photography logo">
+        <span class="brand__name">Gingerbread<span class="brand__tagline">Photography</span></span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="btn btn--primary nav-cta" href="contact.html" aria-current="page">Book a Shoot</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ======================= PAGE HERO ======================= -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="kicker">Contact &amp; Booking</p>
+        <h1>Let's plan your shoot</h1>
+        <p>Con shoots, commissions, event coverage — tell me what you're
+           dreaming up and I'll get back to you within 48 hours.</p>
+      </div>
+    </section>
+
+    <!-- ======================= FORM + INFO ======================= -->
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- ============ BOOKING FORM ============
+               SETUP (one time): this form needs a form backend because
+               GitHub Pages is static. The easiest free option:
+               1. Create a free account at https://formspree.io
+               2. Create a form, copy its endpoint URL
+               3. Replace YOUR_FORM_ID in the action below.
+               Until then, the mailto link in the sidebar works.      -->
+          <form class="form-card" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <h2 class="section-title" style="font-size: var(--text-xl);">Booking request</h2>
+
+            <div class="form-row form-row--split">
+              <div class="form-field">
+                <label for="name">Your name <span aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" required autocomplete="name">
+              </div>
+              <div class="form-field">
+                <label for="email">Email <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="type">What kind of shoot? <span aria-hidden="true">*</span></label>
+              <select id="type" name="shoot_type" required>
+                <option value="" selected disabled>Choose one…</option>
+                <option value="convention">Convention shoot</option>
+                <option value="commission">Private commission / location shoot</option>
+                <option value="event">Event coverage</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+
+            <div class="form-row form-row--split">
+              <div class="form-field">
+                <label for="character">Character &amp; series</label>
+                <input type="text" id="character" name="character" placeholder="e.g. Frieren — Beyond Journey's End">
+                <span class="hint">Skip this for event coverage.</span>
+              </div>
+              <div class="form-field">
+                <label for="date">Convention / preferred date</label>
+                <input type="text" id="date" name="date_or_convention" placeholder="e.g. Comic Con Vienna, June 2027">
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Tell me about your idea <span aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" required
+                        placeholder="Mood, reference images, location ideas, number of costumes — anything that helps me picture it."></textarea>
+            </div>
+
+            <button class="btn btn--primary" type="submit">Send booking request</button>
+            <p class="form-note mt-3">Required fields are marked with *.
+               I usually reply within 48 hours — check spam if you don't hear back.</p>
+          </form>
+
+          <!-- ============ SIDEBAR ============ -->
+          <aside class="contact-aside">
+            <div class="service-card">
+              <h3>Prefer email?</h3>
+              <!-- EDIT ME: your real email address (both places) -->
+              <p>Write me directly at<br>
+                 <a href="mailto:hello@example.com">hello@example.com</a></p>
+            </div>
+
+            <div class="service-card">
+              <h3>Or DM me</h3>
+              <p>Fastest replies during convention weekends:</p>
+              <ul class="footer-links" style="margin-top: 0.75rem;">
+                <!-- EDIT ME: real links -->
+                <li><a href="#">Instagram @gingerbread.photography</a></li>
+                <li><a href="#">TikTok @gingerbread.photography</a></li>
+              </ul>
+            </div>
+
+            <div class="service-card">
+              <h3>Good to know</h3>
+              <p>Every booking includes a pre-shoot chat, a curated set of
+                 fully edited images, and a private online gallery. Group
+                 shoots and multi-costume days are welcome.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="Assets/images/logo/GP%20Logo%202-04.png" alt="Gingerbread Photography logo">
+          <p>Cinematic cosplay photography — convention shoots, private
+             commissions, and event coverage.</p>
+        </div>
+
+        <nav aria-label="Footer navigation">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact &amp; Booking</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h4>Find me</h4>
+          <ul class="footer-links footer-links--social">
+            <!-- EDIT ME: replace # with your real profile links -->
+            <li>
+              <a href="#" rel="me">
+                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" rel="me">
+                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                <span>TikTok</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" rel="me">
+                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <span>X / Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:hello@example.com">
+                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <span>hello@example.com (EDIT ME)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="footer-year">2026</span> Gingerbread Photography. All rights reserved.</span>
+        <span>All cosplays belong to their talented creators.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
