@@ -29,243 +29,158 @@
 
 const PORTFOLIO = [
   {
-    // EXAMPLE ENTRY — verify character/series are correct, then make the rest look like this
-    src: "Assets/images/portfolio/DSC00606-Edit-Edit.jpg",
-    alt: "Fischl cosplayer posing on a red-carpeted gothic staircase under chandeliers",
-    w: 6000, h: 4000,
-    cosplayer: "asti_cosplays", // EDIT ME
-    character: "Fischl (Genshin Impact)",
-    event: "Location shoot",
-  },
-  {
-    // EXAMPLE ENTRY
-    src: "Assets/images/portfolio/DSC09232-Edit.jpg",
-    alt: "Frieren cosplayer with staff and suitcase walking along an old stone wall",
+    src: "Assets/images/portfolio/DSC09270-Edit-Edit.jpg",
     w: 5144, h: 3429,
-    cosplayer: "mila.jaeger_coser", // EDIT ME
+    cosplayer: "@mila.jaeger_coser",
     character: "Frieren (Frieren: Beyond Journey's End)",
-    event: "Location shoot",
+    event: "PixelMania 2k25",
   },
   {
     src: "Assets/images/portfolio/DSC00615-Edit-Edit.jpg",
-    alt: "EDIT ME: describe the character and scene",
     w: 3872, h: 5808,
-    cosplayer: "", character: "", event: "", // EDIT ME
+    cosplayer: "@asti_cosplays",
+    character: "Fischl (Genshin Impact)",
+    event: "Game City Vienna 225",
   },
   {
     src: "Assets/images/portfolio/DSC00741-Edit-Edit.jpg",
-    alt: "EDIT ME: describe the character and scene",
     w: 4000, h: 6000,
-    cosplayer: "", character: "", event: "", // EDIT ME
-  },
-  {
-    src: "Assets/images/portfolio/DSC00769-Edit-Edit.jpg",
-    alt: "EDIT ME: describe the character and scene",
-    w: 6000, h: 4000,
-    cosplayer: "", character: "", event: "", // EDIT ME
+    cosplayer: "@ameriix_cos", 
+    character: "Rias Gremory (Highschool DxD)", 
+    event: "Private shoot",
   },
   {
     src: "Assets/images/portfolio/DSC00803-Edit-Edit-nooniric.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 5783, h: 3855,
-    cosplayer: "", character: "", event: "", // EDIT ME
+    cosplayer: "@menniphi",
+    character: "Yuki Kuran (Vampire Knight)", 
+    event: "Game City Vienna 20025",
   },
   {
     src: "Assets/images/portfolio/DSC01336-Edit-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 4000, h: 6000,
-    cosplayer: "", character: "", event: "", // EDIT ME
+    cosplayer: "@_sayory_", character: "Chen Qianyu (Arknights Endfield)", event: "Dokomi 2026",
   },
   {
     src: "Assets/images/portfolio/DSC01434-Edit-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 3689, h: 5533,
-    cosplayer: "", character: "", event: "", // EDIT ME
+    cosplayer: "@kyuubivi", character: "Bloom (Winx Club)", event: "Dokomi 2026",
   },
   {
     src: "Assets/images/portfolio/DSC01527-Edit-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 6000, h: 4000,
-    cosplayer: "", character: "", event: "", // EDIT ME
-  },
-  {
-    src: "Assets/images/portfolio/DSC01544-Edit-Edit.jpg",
-    alt: "EDIT ME: describe the character and scene",
-    w: 5688, h: 3792,
-    cosplayer: "", character: "", event: "", // EDIT ME
+    cosplayer: "@mirana_cos", character: "Zero (Drakengard 3)", event: "Dokomi 2026",
   },
   {
     src: "Assets/images/portfolio/DSC01795-Edit-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 5734, h: 3823,
-    cosplayer: "", character: "", event: "", // EDIT ME
-  },
-  {
-    src: "Assets/images/portfolio/DSC01812-Edit-Edit.jpg",
-    alt: "EDIT ME: describe the character and scene",
-    w: 5803, h: 3869,
-    cosplayer: "", character: "", event: "", // EDIT ME
+    cosplayer: "@suika_misa", character: "Regensburg (Azur Lane)", event: "Dokomi 2026",
   },
   {
     src: "Assets/images/portfolio/DSC01893-Edit-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 5339, h: 3559,
-    cosplayer: "", character: "", event: "", // EDIT ME
-  },
-  {
-    src: "Assets/images/portfolio/DSC02148-Edit-Edit.jpg",
-    alt: "EDIT ME: describe the character and scene",
-    w: 6000, h: 4000,
-    cosplayer: "", character: "", event: "", // EDIT ME
+    cosplayer: "@sabrafish & @menace.cosplay", character: "Marcille & Falin (Dungeon Meshi)", event: "Private shoot",
   },
   {
     src: "Assets/images/portfolio/DSC02507-Edit-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 5719, h: 3813,
-    cosplayer: "", character: "", event: "", // EDIT ME
+    cosplayer: "@sabrafish", character: "Makima (Chainsaw Man)", event: "Private Studio Shoot",
   },
   {
-    src: "Assets/images/portfolio/DSC02530-Edit-Edit.jpg",
+    src: "Assets/images/portfolio/DSC09910-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
-    w: 6000, h: 4000,
-    cosplayer: "", character: "", event: "", // EDIT ME
+    w: 5719, h: 3813,
+    cosplayer: "@kurisutinaforreal", character: "Shizuku Tan (My Dress Up Darling)", event: "Private Location Shoot",
   },
   {
     src: "Assets/images/portfolio/DSC02810-Edit-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 5573, h: 3715,
-    cosplayer: "", character: "", event: "", // EDIT ME
+    cosplayer: "@adinyan_", character: "Little Mermaid (Goddess of Victory: Nikke)", event: "Private Studio Shoot",
   },
   {
     src: "Assets/images/portfolio/DSC03119-Edit-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 3921, h: 5882,
-    cosplayer: "", character: "", event: "", // EDIT ME
-  },
-  {
-    src: "Assets/images/portfolio/DSC03346-Edit-nowatermark.jpg",
-    alt: "EDIT ME: describe the character and scene",
-    w: 3829, h: 5744,
-    cosplayer: "", character: "", event: "", // EDIT ME
+    cosplayer: "@faithcosplay", character: "Bayonetta (Bayonetta)", event: "Private Studio Shoot",
   },
   {
     src: "Assets/images/portfolio/DSC03532-Edit-Edit-nowatermark.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 6000, h: 4000,
-    cosplayer: "", character: "", event: "", // EDIT ME
+    cosplayer: "@brie.cos", character: "Nicole (Zenless Zone Zero)", event: "Private Location Shoot",
   },
   {
     src: "Assets/images/portfolio/DSC04592-Edit-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 6000, h: 4000,
-    cosplayer: "", character: "", event: "", // EDIT ME
+    cosplayer: "@sabrafish", character: "Zelda (Legend of Zelda: Echoes of Wisdom)", event: "Private Location Shoot",
   },
   {
     src: "Assets/images/portfolio/DSC04905-Edit-Edit-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 3715, h: 5572,
-    cosplayer: "", character: "", event: "", // EDIT ME
+    cosplayer: "michal.cosplay", character: "Reina (Tekken 8)", event: "Private Location Shoot",
   },
   {
     src: "Assets/images/portfolio/DSC07918-Edit-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 6000, h: 4000,
-    cosplayer: "", character: "", event: "", // EDIT ME
-  },
-  {
-    src: "Assets/images/portfolio/DSC07976-Edit-Edit.jpg",
-    alt: "EDIT ME: describe the character and scene",
-    w: 5901, h: 3934,
-    cosplayer: "", character: "", event: "", // EDIT ME
+    cosplayer: "inked.nyx", character: "Aurora (League of Legends)", event: "Private Studio Shoot",
   },
   {
     src: "Assets/images/portfolio/DSC08081-Edit-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 6000, h: 4000,
-    cosplayer: "", character: "", event: "", // EDIT ME
+    cosplayer: "@kona_fraubow", character: "Shore Keeper (Wuthering Waves)", event: "PixelMania 2k25",
   },
   {
     src: "Assets/images/portfolio/DSC08168-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 3445, h: 5168,
-    cosplayer: "", character: "", event: "", // EDIT ME
-  },
-  {
-    src: "Assets/images/portfolio/DSC08336-Edit-Edit-Edit.jpg",
-    alt: "EDIT ME: describe the character and scene",
-    w: 5442, h: 3628,
-    cosplayer: "", character: "", event: "", // EDIT ME
+    cosplayer: "@_sayory_ & @_kisharu_", character: "Tingyun & Fugue (Honkai Star Rail)", event: "PixelMania 2k25",
   },
   {
     src: "Assets/images/portfolio/DSC08426-Edit-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 5142, h: 3428,
-    cosplayer: "", character: "", event: "", // EDIT ME
+    cosplayer: "@annie.note", character: "Ganon (Legend of Zelda)", event: "PixelMania 2k25",
   },
   {
     src: "Assets/images/portfolio/DSC08854-Edit-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 5493, h: 3662,
-    cosplayer: "", character: "", event: "", // EDIT ME
-  },
-  {
-    src: "Assets/images/portfolio/DSC08912-Edit-Edit.jpg",
-    alt: "EDIT ME: describe the character and scene",
-    w: 4000, h: 6000,
-    cosplayer: "", character: "", event: "", // EDIT ME
-  },
-  {
-    src: "Assets/images/portfolio/DSC08939-Edit-Edit-Edit-Edit.jpg",
-    alt: "EDIT ME: describe the character and scene",
-    w: 5657, h: 3771,
-    cosplayer: "", character: "", event: "", // EDIT ME
+    cosplayer: "@menniphi", character: "A2 (Nier: Automata)", event: "PixelMania 2k25",
   },
   {
     src: "Assets/images/portfolio/DSC08987-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 3949, h: 2633,
-    cosplayer: "", character: "", event: "", // EDIT ME
+    cosplayer: "@its_antartide", character: "Bunny Splicer (BioShock)", event: "PixelMania 2k25",
   },
   {
     src: "Assets/images/portfolio/DSC09028-Edit-2-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 5426, h: 3617,
-    cosplayer: "", character: "", event: "", // EDIT ME
+    cosplayer: "@cata_koo", character: "Caitlyn (Arcane)", event: "Private Location Shoot",
   },
   {
     src: "Assets/images/portfolio/DSC09056-Edit-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 5410, h: 3607,
-    cosplayer: "", character: "", event: "", // EDIT ME
+    cosplayer: "@pixapepi & @fluremingu", character: "Koleda & Nicole (Zenless Zone Zero)", event: "PixelMania 2k25",
   },
   {
-    src: "Assets/images/portfolio/DSC09144-Edit-Edit-Edit.jpg",
-    alt: "EDIT ME: describe the character and scene",
-    w: 5668, h: 3779,
-    cosplayer: "", character: "", event: "", // EDIT ME
-  },
-  {
-    src: "Assets/images/portfolio/DSC09187-Edit-Edit.jpg",
+    src: "Assets/images/portfolio/DSC09453-Edit-Edit-nowatermark.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 5699, h: 3799,
-    cosplayer: "", character: "", event: "", // EDIT ME
-  },
-  {
-    src: "Assets/images/portfolio/DSC09270-Edit-Edit.jpg",
-    alt: "EDIT ME: describe the character and scene",
-    w: 6000, h: 4000,
-    cosplayer: "", character: "", event: "", // EDIT ME
-  },
-  {
-    src: "Assets/images/portfolio/DSC09286-Edit-Edit-Edit.jpg",
-    alt: "EDIT ME: describe the character and scene",
-    w: 6000, h: 4000,
-    cosplayer: "", character: "", event: "", // EDIT ME
-  },
-  {
-    src: "Assets/images/portfolio/DSC09791-Edit-Edit-Edit-oniric.jpg",
-    alt: "EDIT ME: describe the character and scene",
-    w: 5640, h: 3760,
-    cosplayer: "", character: "", event: "", // EDIT ME
+    cosplayer: "@goldberry.cosplay", character: "Yor (Spy x Family)", event: "Private Studio Shoot",
   },
 ];
