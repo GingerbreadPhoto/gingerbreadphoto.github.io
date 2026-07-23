@@ -117,6 +117,18 @@ a:hover { color: var(--mocha); }
   margin-inline: auto;
 }
 
+/* Wider container for image-heavy pages (e.g. the portfolio gallery) so
+   the sides don't look empty on large screens. Stays comfortable on
+   mobile, opens up to 80% of the viewport on desktop. */
+.container--wide {
+  width: min(100% - 2.5rem, var(--container));
+  margin-inline: auto;
+}
+
+@media (min-width: 1000px) {
+  .container--wide { width: 80%; max-width: 2100px; }
+}
+
 .section { padding-block: var(--space-5); }
 
 @media (min-width: 768px) {
@@ -372,11 +384,18 @@ a:hover { color: var(--mocha); }
 /* ---- Hero slideshow (home) ------------------------------------------------ */
 .hero {
   position: relative;
-  min-height: min(92vh, 860px);
+  min-height: min(92vh, 960px);
   display: flex;
   align-items: flex-end;
   overflow: hidden;
   background: var(--espresso-deep);
+}
+
+/* On very wide screens the hero gets short relative to its width, so
+   `cover` has to crop a lot vertically. Give it more height there so
+   subjects' heads stay in frame. */
+@media (min-width: 1600px) {
+  .hero { min-height: min(90vh, 1100px); }
 }
 
 .hero__slides { position: absolute; inset: 0; }
@@ -392,10 +411,16 @@ a:hover { color: var(--mocha); }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* Bias the crop toward the upper part of the frame so heads/faces
+     stay visible when a wide landscape shot is cropped to the hero. */
+  object-position: center 28%;
 }
 
 .hero__slide.is-active {
   opacity: 1;
+  /* Zoom from the same upper anchor so the top isn't pushed out of
+     frame as the image scales up. */
+  transform-origin: center 28%;
   animation: kenburns 7s ease-out forwards;
 }
 
@@ -660,6 +685,7 @@ a:hover { color: var(--mocha); }
 
 @media (min-width: 560px)  { .gallery { columns: 2; } }
 @media (min-width: 960px)  { .gallery { columns: 3; } }
+@media (min-width: 1500px) { .gallery { columns: 4; } }
 
 .gallery__item {
   break-inside: avoid;
