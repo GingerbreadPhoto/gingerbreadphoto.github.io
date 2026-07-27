@@ -7,14 +7,20 @@ GitHub Pages as-is.
 
 | File | What it is | Edit it when… |
 |---|---|---|
-| `index.html` | Homepage: hero slideshow, intro, featured grid, services | You want different hero/featured photos or new intro text |
+| `index.html` | Homepage: hero slideshow, intro, featured grid | You want different hero/featured photos or new intro text |
 | `portfolio.html` | Gallery (content comes from `js/portfolio-data.js`) | Rarely — the gallery fills itself from the data file |
 | `about.html` | Your story + approach | Replacing the `EDIT ME` text and portrait placeholder |
 | `contact.html` | Booking form + contact info | Wiring up the form and adding your real email/socials |
 | `css/styles.css` | All styling. **Design tokens (colors, fonts, spacing) are at the top** | You want to tweak colors or fonts site-wide |
 | `js/portfolio-data.js` | **The one file that controls your gallery** | Every time you add/remove/tag photos |
-| `js/gallery.js` | Lightbox + lazy-load logic | Never (unless changing behavior) |
+| `js/gallery.js` | Builds the portfolio grid + lazy-loading | Never (unless changing behavior) |
+| `js/lightbox.js` | Shared photo viewer (used by portfolio + homepage) | Never (unless changing behavior) |
+| `js/featured.js` | Makes the homepage "Featured work" photos open in the lightbox | Never — it reads the images from `index.html` |
 | `js/main.js` | Nav menu, hero slideshow, scroll animations | Never (unless changing behavior) |
+
+> **Homepage featured photos:** edit them directly in `index.html` (the
+> `.featured-grid` block). Clicking one opens it in the same lightbox as the
+> portfolio — the caption comes from each card's `photo-card__label` text.
 
 ## How to add a photo to the portfolio
 

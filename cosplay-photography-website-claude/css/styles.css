@@ -517,6 +517,14 @@ a:hover { color: var(--mocha); }
   aspect-ratio: 3 / 4;
   background: var(--taupe);
   box-shadow: var(--shadow);
+  /* Reset so it looks identical whether it's an <a> or a <button> */
+  width: 100%;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
 }
 
 .photo-card img {

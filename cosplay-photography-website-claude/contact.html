@@ -48,92 +48,34 @@
       </div>
     </section>
 
-    <!-- ======================= FORM + INFO ======================= -->
+    <!-- ======================= CONTACT INFO ======================= -->
     <section class="section">
       <div class="container">
-        <div class="contact-grid">
+        <div class="card-grid contact-cards">
 
-          <!-- ============ BOOKING FORM ============
-               SETUP (one time): this form needs a form backend because
-               GitHub Pages is static. The easiest free option:
-               1. Create a free account at https://formspree.io
-               2. Create a form, copy its endpoint URL
-               3. Replace YOUR_FORM_ID in the action below.
-               Until then, the mailto link in the sidebar works.      -->
-          <form class="form-card" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <h2 class="section-title" style="font-size: var(--text-xl);">Booking request</h2>
+          <div class="service-card">
+            <h3>Prefer email?</h3>
+            <!-- EDIT ME: your real email address -->
+            <p>Write me directly at<br>
+               <a href="mailto:hello@example.com">hello@example.com</a></p>
+          </div>
 
-            <div class="form-row form-row--split">
-              <div class="form-field">
-                <label for="name">Your name <span aria-hidden="true">*</span></label>
-                <input type="text" id="name" name="name" required autocomplete="name">
-              </div>
-              <div class="form-field">
-                <label for="email">Email <span aria-hidden="true">*</span></label>
-                <input type="email" id="email" name="email" required autocomplete="email">
-              </div>
-            </div>
+          <div class="service-card">
+            <h3>Or DM me</h3>
+            <p>Fastest replies during convention weekends:</p>
+            <ul class="footer-links" style="margin-top: 0.75rem;">
+              <!-- EDIT ME: real links -->
+              <li><a href="#">Instagram @gingerbread.photography</a></li>
+              <li><a href="#">TikTok @gingerbread.photography</a></li>
+            </ul>
+          </div>
 
-            <div class="form-field">
-              <label for="type">What kind of shoot? <span aria-hidden="true">*</span></label>
-              <select id="type" name="shoot_type" required>
-                <option value="" selected disabled>Choose one…</option>
-                <option value="convention">Convention shoot</option>
-                <option value="commission">Private commission / location shoot</option>
-                <option value="event">Event coverage</option>
-                <option value="other">Something else</option>
-              </select>
-            </div>
-
-            <div class="form-row form-row--split">
-              <div class="form-field">
-                <label for="character">Character &amp; series</label>
-                <input type="text" id="character" name="character" placeholder="e.g. Frieren — Beyond Journey's End">
-                <span class="hint">Skip this for event coverage.</span>
-              </div>
-              <div class="form-field">
-                <label for="date">Convention / preferred date</label>
-                <input type="text" id="date" name="date_or_convention" placeholder="e.g. Comic Con Vienna, June 2027">
-              </div>
-            </div>
-
-            <div class="form-field">
-              <label for="message">Tell me about your idea <span aria-hidden="true">*</span></label>
-              <textarea id="message" name="message" required
-                        placeholder="Mood, reference images, location ideas, number of costumes — anything that helps me picture it."></textarea>
-            </div>
-
-            <button class="btn btn--primary" type="submit">Send booking request</button>
-            <p class="form-note mt-3">Required fields are marked with *.
-               I usually reply within 48 hours — check spam if you don't hear back.</p>
-          </form>
-
-          <!-- ============ SIDEBAR ============ -->
-          <aside class="contact-aside">
-            <div class="service-card">
-              <h3>Prefer email?</h3>
-              <!-- EDIT ME: your real email address (both places) -->
-              <p>Write me directly at<br>
-                 <a href="mailto:hello@example.com">hello@example.com</a></p>
-            </div>
-
-            <div class="service-card">
-              <h3>Or DM me</h3>
-              <p>Fastest replies during convention weekends:</p>
-              <ul class="footer-links" style="margin-top: 0.75rem;">
-                <!-- EDIT ME: real links -->
-                <li><a href="#">Instagram @gingerbread.photography</a></li>
-                <li><a href="#">TikTok @gingerbread.photography</a></li>
-              </ul>
-            </div>
-
-            <div class="service-card">
-              <h3>Good to know</h3>
-              <p>Every booking includes a pre-shoot chat, a curated set of
-                 fully edited images, and a private online gallery. Group
-                 shoots and multi-costume days are welcome.</p>
-            </div>
-          </aside>
+          <div class="service-card">
+            <h3>Good to know</h3>
+            <p>Every booking includes a pre-shoot chat, a curated set of
+               fully edited images, and a private online gallery. Group
+               shoots and multi-costume days are welcome.</p>
+          </div>
         </div>
       </div>
     </section>

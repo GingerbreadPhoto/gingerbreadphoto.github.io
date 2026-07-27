@@ -1,7 +1,7 @@
 /* ============================================================================
    gallery.js — portfolio page: renders the grid from PORTFOLIO (see
-   portfolio-data.js), lazy-loads images, and provides a keyboard-accessible
-   lightbox with a crossfade between photos.
+   portfolio-data.js), lazy-loads images, and opens the shared lightbox
+   (js/lightbox.js) with a crossfade between photos.
 
    Captions show: cosplayer → character → event.
 
@@ -20,6 +20,16 @@
     var v = (item[key] || "").trim();
     return v.indexOf("EDIT ME") === -1 ? v : "";
   }
+
+  /* ---- Lightbox: build the items list once, order = cosplayer → character → event ---- */
+  var lightboxItems = PORTFOLIO.map(function (item) {
+    var parts = [];
+    if (field(item, "cosplayer")) parts.push("<strong>" + gbEscapeHtml(field(item, "cosplayer")) + "</strong>");
+    if (field(item, "character")) parts.push(gbEscapeHtml(field(item, "character")));
+    if (field(item, "event")) parts.push(gbEscapeHtml(field(item, "event")));
+    return { src: item.src, alt: item.alt, caption: parts.join(" · ") };
+  });
+  var lightbox = createLightbox(lightboxItems);
 
   /* ---- Lazy loading ---- */
   var lazyObserver =
@@ -51,7 +61,7 @@
     btn.type = "button";
     btn.className = "gallery__item";
     btn.setAttribute("aria-label", "Open larger view: " + item.alt);
-    btn.addEventListener("click", function () { openLightbox(index); });
+    btn.addEventListener("click", function () { lightbox.open(index); });
 
     var img = document.createElement("img");
     img.alt = item.alt;
@@ -95,81 +105,5 @@
     }
 
     galleryEl.appendChild(btn);
-  });
-
-  /* ---- Lightbox ---- */
-  var lightbox = document.getElementById("lightbox");
-  var lightboxImg = lightbox.querySelector(".lightbox__img");
-  var lightboxCaption = lightbox.querySelector(".lightbox__caption");
-  var lightboxIndex = 0;
-  var lastFocused = null;
-  var FADE_MS = 200; // keep in sync with the .lightbox__img transition
-
-  function openLightbox(index) {
-    lightboxIndex = index;
-    lastFocused = document.activeElement;
-    updateLightbox();
-    lightbox.classList.add("is-open");
-    document.body.style.overflow = "hidden";
-    lightbox.querySelector(".lightbox__close").focus();
-  }
-
-  function closeLightbox() {
-    lightbox.classList.remove("is-open");
-    document.body.style.overflow = "";
-    if (lastFocused) lastFocused.focus();
-  }
-
-  // Fade the current photo out, swap, fade the new one in
-  function stepLightbox(direction) {
-    lightboxIndex = (lightboxIndex + direction + PORTFOLIO.length) % PORTFOLIO.length;
-    lightboxImg.classList.add("is-fading");
-
-    window.setTimeout(function () {
-      updateLightbox();
-      var finish = function () {
-        lightboxImg.classList.remove("is-fading");
-        lightboxImg.removeEventListener("load", finish);
-      };
-      lightboxImg.addEventListener("load", finish);
-      if (lightboxImg.complete) finish();
-    }, FADE_MS);
-  }
-
-  function updateLightbox() {
-    var item = PORTFOLIO[lightboxIndex];
-    lightboxImg.src = encodeURI(item.src);
-    lightboxImg.alt = item.alt;
-
-    // Caption order: cosplayer first, then character, then event
-    var parts = [];
-    if (field(item, "cosplayer")) parts.push("<strong>" + escapeHtml(field(item, "cosplayer")) + "</strong>");
-    if (field(item, "character")) parts.push(escapeHtml(field(item, "character")));
-    if (field(item, "event")) parts.push(escapeHtml(field(item, "event")));
-    lightboxCaption.innerHTML =
-      (parts.length ? parts.join(" · ") + ' <span aria-hidden="true">—</span> ' : "") +
-      (lightboxIndex + 1) + " / " + PORTFOLIO.length;
-  }
-
-  function escapeHtml(str) {
-    var div = document.createElement("div");
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
-  }
-
-  lightbox.querySelector(".lightbox__close").addEventListener("click", closeLightbox);
-  lightbox.querySelector(".lightbox__prev").addEventListener("click", function () { stepLightbox(-1); });
-  lightbox.querySelector(".lightbox__next").addEventListener("click", function () { stepLightbox(1); });
-
-  // Click on the dark backdrop closes
-  lightbox.addEventListener("click", function (event) {
-    if (event.target === lightbox) closeLightbox();
-  });
-
-  document.addEventListener("keydown", function (event) {
-    if (!lightbox.classList.contains("is-open")) return;
-    if (event.key === "Escape") closeLightbox();
-    if (event.key === "ArrowLeft") stepLightbox(-1);
-    if (event.key === "ArrowRight") stepLightbox(1);
   });
 })();
