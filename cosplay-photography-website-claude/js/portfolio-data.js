@@ -29,7 +29,7 @@
 
 const PORTFOLIO = [
   {
-    src: "Assets/images/portfolio/DSC09270-Edit-Edit.jpg",
+    src: "Assets/images/portfolio/DSC09232-Edit.jpg",
     w: 5144, h: 3429,
     cosplayer: "@mila.jaeger_coser",
     character: "Frieren (Frieren: Beyond Journey's End)",
