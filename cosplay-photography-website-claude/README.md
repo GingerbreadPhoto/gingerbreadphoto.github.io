@@ -35,12 +35,19 @@ GitHub Pages as-is.
   cosplayer: "@stardust.cos",
   character: "Frieren",
   event: "Comic Con Vienna 2026",
+  type: "Convention Shoot",       // powers the filter buttons
 },
 ```
 
 That's it — the photo appears in the gallery. Captions (on hover and in
 the photo viewer) show cosplayer → character → event; fields left as `""`
 are simply skipped.
+
+**Filter buttons:** the Portfolio page shows a row of filter buttons built
+automatically from the `type` values in your data. Keep the spelling
+consistent (e.g. always `"Private Shoot"`) so photos group together — any
+new `type` value becomes a new button on its own. Suggested categories:
+`"Convention Shoot"`, `"Photo Event"`, `"Private Shoot"`.
 
 ## Placeholders you still need to fill in
 

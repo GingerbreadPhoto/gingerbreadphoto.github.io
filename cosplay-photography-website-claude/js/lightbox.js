@@ -24,15 +24,23 @@ function gbEscapeHtml(str) {
 
 function createLightbox(items) {
   var lightbox = document.getElementById("lightbox");
-  if (!lightbox || !items || !items.length) return { open: function () {} };
+  if (!lightbox) return { open: function () {}, setItems: function () {} };
 
+  var current = items || [];
   var img = lightbox.querySelector(".lightbox__img");
   var caption = lightbox.querySelector(".lightbox__caption");
   var index = 0;
   var lastFocused = null;
   var FADE_MS = 200; // keep in sync with the .lightbox__img transition
 
+  // Swap the set of photos the lightbox cycles through (used when the
+  // portfolio is filtered so prev/next stay within the visible photos).
+  function setItems(newItems) {
+    current = newItems || [];
+  }
+
   function open(i) {
+    if (!current.length) return;
     index = i;
     lastFocused = document.activeElement;
     update();
@@ -49,7 +57,8 @@ function createLightbox(items) {
 
   // Fade the current photo out, swap the source, fade the new one in
   function step(direction) {
-    index = (index + direction + items.length) % items.length;
+    if (!current.length) return;
+    index = (index + direction + current.length) % current.length;
     img.classList.add("is-fading");
 
     window.setTimeout(function () {
@@ -64,12 +73,12 @@ function createLightbox(items) {
   }
 
   function update() {
-    var item = items[index];
+    var item = current[index];
     img.src = encodeURI(item.src);
     img.alt = item.alt || "";
     caption.innerHTML =
       (item.caption ? item.caption + ' <span aria-hidden="true">—</span> ' : "") +
-      (index + 1) + " / " + items.length;
+      (index + 1) + " / " + current.length;
   }
 
   lightbox.querySelector(".lightbox__close").addEventListener("click", close);
@@ -88,5 +97,5 @@ function createLightbox(items) {
     if (event.key === "ArrowRight") step(1);
   });
 
-  return { open: open };
+  return { open: open, setItems: setItems };
 }

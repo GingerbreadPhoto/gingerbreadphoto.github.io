@@ -684,11 +684,51 @@ a:hover { color: var(--mocha); }
 
 .page-hero p { color: var(--taupe); max-width: 60ch; margin-inline: auto; margin-bottom: 0; }
 
+/* ---- Portfolio filter ---------------------------------------------------------- */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: var(--space-4);
+}
+
+.filter-chip {
+  min-height: 44px;
+  padding: 0.5em 1.3em;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--espresso);
+  background: var(--white);
+  border: 1px solid var(--taupe);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color var(--transition), border-color var(--transition),
+              color var(--transition);
+}
+
+.filter-chip:hover { border-color: var(--mocha); }
+
+.filter-chip[aria-pressed="true"] {
+  background: var(--espresso);
+  border-color: var(--espresso);
+  color: var(--mint);
+}
+
+.gallery-count {
+  text-align: center;
+  color: var(--mocha);
+  font-size: var(--text-sm);
+  margin-top: var(--space-2);
+  margin-bottom: 0;
+}
+
 /* ---- Gallery (masonry via CSS columns) ---------------------------------------- */
 .gallery {
   columns: 1;
   column-gap: var(--space-2);
-  margin-top: var(--space-4);
+  margin-top: var(--space-3);
 }
 
 @media (min-width: 560px)  { .gallery { columns: 2; } }
@@ -866,7 +906,9 @@ a:hover { color: var(--mocha); }
   color: var(--mocha);
 }
 
-.approach-list h3 { font-size: var(--text-lg); margin-bottom: 0.35rem; }
+/* The cards are light even though the section is dark, so keep the
+   heading dark (otherwise it's white-on-white and invisible). */
+.approach-list h3 { font-size: var(--text-lg); margin-bottom: 0.35rem; color: var(--espresso); }
 .approach-list p { color: var(--mocha); margin: 0; }
 
 /* ---- Placeholder slots (drop real content here) -------------------------------------- */

@@ -51,6 +51,11 @@
     <!-- ======================= GALLERY ======================= -->
     <section class="section">
       <div class="container--wide">
+        <!-- Filter buttons are built by js/gallery.js from each photo's
+             `type` field in js/portfolio-data.js -->
+        <div class="filter-bar" id="filter-bar" role="group" aria-label="Filter photos by shoot type"></div>
+        <p class="gallery-count" id="gallery-count" aria-live="polite"></p>
+
         <div class="gallery" id="gallery"></div>
       </div>
     </section>
