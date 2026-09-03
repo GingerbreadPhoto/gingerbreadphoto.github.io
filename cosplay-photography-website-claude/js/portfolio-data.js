@@ -58,10 +58,16 @@ const PORTFOLIO = [
     event: "Game City Vienna 20025",
   },
   {
-    src: "Assets/images/portfolio/DSC01336-Edit-Edit.jpg",
+    src: "Assets/images/portfolio/DSC03749-Edit-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 4000, h: 6000,
-    cosplayer: "@_sayory_", character: "Chen Qianyu (Arknights Endfield)", event: "Dokomi 2026",
+    cosplayer: "@_sayory_", character: "Lynae (Wuthering Waves)", event: "PixelMania 2K26",
+  },
+  {
+    src: "Assets/images/portfolio/DSC02056-Edit-Edit.jpg",
+    alt: "EDIT ME: describe the character and scene",
+    w: 4000, h: 6000,
+    cosplayer: "@zumz.deni", character: "Aerith (Final Fantasy VII)", event: "PixelMania 2K26",
   },
   {
     src: "Assets/images/portfolio/DSC01434-Edit-Edit.jpg",
@@ -118,12 +124,6 @@ const PORTFOLIO = [
     cosplayer: "@brie.cos", character: "Nicole (Zenless Zone Zero)", event: "Private Location Shoot",
   },
   {
-    src: "Assets/images/portfolio/DSC04592-Edit-Edit.jpg",
-    alt: "EDIT ME: describe the character and scene",
-    w: 6000, h: 4000,
-    cosplayer: "@sabrafish", character: "Zelda (Legend of Zelda: Echoes of Wisdom)", event: "Private Location Shoot",
-  },
-  {
     src: "Assets/images/portfolio/DSC04905-Edit-Edit-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 3715, h: 5572,
@@ -172,10 +172,10 @@ const PORTFOLIO = [
     cosplayer: "@cata_koo", character: "Caitlyn (Arcane)", event: "Private Location Shoot",
   },
   {
-    src: "Assets/images/portfolio/DSC09056-Edit-Edit.jpg",
+    src: "Assets/images/portfolio/DSC03476-Edit-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 5410, h: 3607,
-    cosplayer: "@pixapepi & @fluremingu", character: "Koleda & Nicole (Zenless Zone Zero)", event: "PixelMania 2k25",
+    cosplayer: "@mirana_cos", character: "MC Dragon (Love and Deep Space)", event: "PixelMania 2k26",
   },
   {
     src: "Assets/images/portfolio/DSC09453-Edit-Edit-nowatermark.jpg",
