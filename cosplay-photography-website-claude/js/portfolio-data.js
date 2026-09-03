@@ -57,7 +57,7 @@ const PORTFOLIO = [
     w: 4000, h: 6000,
     cosplayer: "@ameriix_cos",
     character: "Rias Gremory (Highschool DxD)",
-    event: "Private shoot",
+    event: "Private Outdoor shoot",
     type: "Location Photoshoot",
   },
   {
@@ -108,7 +108,7 @@ const PORTFOLIO = [
     src: "Assets/images/portfolio/DSC01893-Edit-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 5339, h: 3559,
-    cosplayer: "@sabrafish & @menace.cosplay", character: "Marcille & Falin (Dungeon Meshi)", event: "Private shoot",
+    cosplayer: "@sabrafish & @menace.cosplay", character: "Marcille & Falin (Dungeon Meshi)", event: "Private Outdoor shoot",
     type: "Location Photoshoot",
   },
   {
@@ -122,7 +122,7 @@ const PORTFOLIO = [
     src: "Assets/images/portfolio/DSC09910-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 5719, h: 3813,
-    cosplayer: "@kurisutinaforreal", character: "Shizuku Tan (My Dress Up Darling)", event: "Private Location Shoot",
+    cosplayer: "@kurisutinaforreal", character: "Shizuku Tan (My Dress Up Darling)", event: "Private Studio Shoot",
     type: "Studio shoot",
   },
   {
@@ -143,14 +143,14 @@ const PORTFOLIO = [
     src: "Assets/images/portfolio/DSC03532-Edit-Edit-nowatermark.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 6000, h: 4000,
-    cosplayer: "@brie.cos", character: "Nicole (Zenless Zone Zero)", event: "Private Location Shoot",
+    cosplayer: "@brie.cos", character: "Nicole (Zenless Zone Zero)", event: "Private Outdoor shoot",
     type: "Location Photoshoot",
   },
   {
     src: "Assets/images/portfolio/DSC04905-Edit-Edit-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 3715, h: 5572,
-    cosplayer: "@michal.cosplay", character: "Reina (Tekken 8)", event: "Private Location Shoot",
+    cosplayer: "@michal.cosplay", character: "Reina (Tekken 8)", event: "Private Outdoor shoot",
     type: "Location Photoshoot",
   },
   {
@@ -199,7 +199,7 @@ const PORTFOLIO = [
     src: "Assets/images/portfolio/DSC09028-Edit-2-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 5426, h: 3617,
-    cosplayer: "@cata_koo", character: "Caitlyn (Arcane)", event: "Private Location Shoot",
+    cosplayer: "@cata_koo", character: "Caitlyn (Arcane)", event: "Private Outdoor shoot",
     type: "Location Photoshoot",
   },
   {
