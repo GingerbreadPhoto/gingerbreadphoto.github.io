@@ -724,25 +724,31 @@ a:hover { color: var(--mocha); }
   margin-bottom: 0;
 }
 
-/* ---- Gallery (masonry via CSS columns) ---------------------------------------- */
+/* ---- Gallery (justified rows via flexbox) ------------------------------------- */
 .gallery {
-  columns: 1;
-  column-gap: var(--space-2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
   margin-top: var(--space-3);
+  /* Row height — photos in a row share this height; their widths flex to
+     their aspect ratio (set per-item in js/gallery.js) so rows fill edge
+     to edge. */
+  --row-h: 240px;
 }
 
-@media (min-width: 560px)  { .gallery { columns: 2; } }
-@media (min-width: 960px)  { .gallery { columns: 3; } }
-@media (min-width: 1500px) { .gallery { columns: 4; } }
+@media (min-width: 768px)  { .gallery { --row-h: 300px; } }
+@media (min-width: 1500px) { .gallery { --row-h: 340px; } }
 
 .gallery__item {
-  break-inside: avoid;
-  margin-bottom: var(--space-2);
+  /* flex-grow / flex-basis are set per-item from the photo's aspect ratio
+     (see gallery.js); this is the fallback before that runs. */
+  flex: 1 1 auto;
+  height: var(--row-h);
   border: 0;
   padding: 0;
-  background: none;
+  background: var(--taupe);
   cursor: pointer;
-  width: 100%;
   border-radius: var(--radius-lg);
   overflow: hidden;
   position: relative;
@@ -751,7 +757,12 @@ a:hover { color: var(--mocha); }
 
 .gallery__item img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  /* When a photo has to be cropped to fit its row, keep the crop toward the
+     upper part of the frame so faces/heads stay in view instead of cropping
+     to the middle of the body. */
+  object-position: center 30%;
   border-radius: var(--radius-lg);
   background: var(--taupe);
   transition: transform 450ms ease, opacity 600ms ease;

@@ -81,6 +81,40 @@
       img.style.aspectRatio = "2 / 3";
     }
 
+    // Justified flexbox rows: each photo grows in proportion to its aspect
+    // ratio (wide photos take more width). The flex-basis is the photo's
+    // natural width AT the current row height (--row-h), so before any row
+    // justification the tile matches the photo's real shape — no crop. Rows
+    // then grow tiles slightly to fill the width (minor top/bottom crop,
+    // biased to faces via object-position).
+    var ar = item.w && item.h ? item.w / item.h : 2 / 3;
+    // Landscapes absorb most of each row's leftover width (grow ~ ar²), so
+    // portraits barely stretch and keep close to their true shape.
+    // max-width caps how far a photo may stretch beyond its natural width
+    // (1.5× here), so a lone photo on a sparse last row can't blow up to fill
+    // the whole width — it stops, and the row is centered instead.
+    var STRETCH_CAP = 1.5;
+    function applyAspect(a) {
+      btn.style.flexGrow = a * a;
+      btn.style.flexShrink = "1";
+      btn.style.flexBasis = "calc(var(--row-h) * " + a + ")";
+      btn.style.maxWidth = "calc(var(--row-h) * " + a + " * " + STRETCH_CAP + ")";
+    }
+    applyAspect(ar);
+
+    // Self-correct: if the w/h in portfolio-data.js don't match the real
+    // image (e.g. numbers were pasted in wrong), fix the tile's shape once
+    // the photo loads — so a portrait can never be stretched like a landscape
+    // just because its data says so.
+    img.addEventListener("load", function () {
+      if (!img.naturalWidth || !img.naturalHeight) return;
+      var realAr = img.naturalWidth / img.naturalHeight;
+      if (Math.abs(realAr - ar) > 0.02) {
+        ar = realAr;
+        applyAspect(ar);
+      }
+    });
+
     if (lazyObserver) lazyObserver.observe(img);
     else loadImage(img);
 
@@ -101,14 +135,18 @@
       btn.appendChild(cap);
     }
 
-    galleryEl.appendChild(btn);
-
-    var entry = { item: item, card: btn, lbItem: { src: item.src, alt: item.alt, caption: captionFor(item) }, visibleIndex: -1 };
+    var entry = { item: item, card: btn, ar: ar, lbItem: { src: item.src, alt: item.alt, caption: captionFor(item) }, visibleIndex: -1 };
     btn.addEventListener("click", function () {
       if (entry.visibleIndex >= 0) lightbox.open(entry.visibleIndex);
     });
     return entry;
   });
+
+  // Keep the photos in their original data order (the order in
+  // portfolio-data.js). The stretch cap + centered rows (see applyAspect and
+  // the .gallery justify-content) keep the bottom row tidy — a lone photo
+  // there stays near its natural size and is centered, not stretched wide.
+  entries.forEach(function (entry) { galleryEl.appendChild(entry.card); });
 
   /* ---- Filtering by shoot type ---- */
   function applyFilter(type) {

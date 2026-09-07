@@ -14,7 +14,10 @@
    - w, h        : the image's pixel width/height. Lets the browser reserve
                    the right amount of space before the photo loads (no
                    layout jumping). If you don't know them, right-click the
-                   file → Properties → Details, or just omit both.
+                   file → Properties → Details, or just omit both — the
+                   gallery reads the real size once the photo loads and
+                   corrects the layout, so a wrong number only causes a brief
+                   flicker, never a permanently stretched photo.
    - cosplayer   : the cosplayer's name/handle, e.g. "@stardust.cos"
    - character   : who they're cosplaying, e.g. "Frieren"
    - event       : where it was shot, e.g. "Comic Con Vienna 2025" or
@@ -112,6 +115,13 @@ const PORTFOLIO = [
     type: "Location Photoshoot",
   },
   {
+    src: "Assets/images/portfolio/DSC02810-Edit-Edit.jpg",
+    alt: "EDIT ME: describe the character and scene",
+    w: 5573, h: 3715,
+    cosplayer: "@adinyan_", character: "Little Mermaid (Goddess of Victory: Nikke)", event: "Private Studio Shoot",
+    type: "Studio shoot",
+  },
+  {
     src: "Assets/images/portfolio/DSC02507-Edit-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 5719, h: 3813,
@@ -119,17 +129,31 @@ const PORTFOLIO = [
     type: "Studio shoot",
   },
   {
+    src: "Assets/images/portfolio/DSC09453-Edit-Edit-nowatermark.jpg",
+    alt: "EDIT ME: describe the character and scene",
+    w: 3827, h: 5740,
+    cosplayer: "@goldberry.cosplay", character: "Yor (Spy x Family)", event: "Private Studio Shoot",
+    type: "Studio shoot",
+  },
+  {
+    src: "Assets/images/portfolio/DSC09272-Edit-Edit-nowatermark.jpg",
+    alt: "EDIT ME: describe the character and scene",
+    w: 3658, h: 5487,
+    cosplayer: "@goldberry.cosplay", character: "Yor (Spy x Family)", event: "Private Studio Shoot",
+    type: "Studio shoot",
+  },
+  {
+    src: "Assets/images/portfolio/DSC02035.jpg",
+    alt: "EDIT ME: describe the character and scene",
+    w: 1334, h: 2000,
+    cosplayer: "@menace.cosplay", character: "Haruko Haruhara (FLCL)", event: "Private Studio Shoot",
+    type: "Studio shoot",
+  },
+  {
     src: "Assets/images/portfolio/DSC09910-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 5719, h: 3813,
     cosplayer: "@kurisutinaforreal", character: "Shizuku Tan (My Dress Up Darling)", event: "Private Studio Shoot",
-    type: "Studio shoot",
-  },
-  {
-    src: "Assets/images/portfolio/DSC02810-Edit-Edit.jpg",
-    alt: "EDIT ME: describe the character and scene",
-    w: 5573, h: 3715,
-    cosplayer: "@adinyan_", character: "Little Mermaid (Goddess of Victory: Nikke)", event: "Private Studio Shoot",
     type: "Studio shoot",
   },
   {
@@ -208,26 +232,5 @@ const PORTFOLIO = [
     w: 5410, h: 3607,
     cosplayer: "@mirana_cos", character: "MC Dragon (Love and Deep Space)", event: "PixelMania 2k26",
     type: "Location Photoshoot",
-  },
-  {
-    src: "Assets/images/portfolio/DSC09453-Edit-Edit-nowatermark.jpg",
-    alt: "EDIT ME: describe the character and scene",
-    w: 5699, h: 3799,
-    cosplayer: "@goldberry.cosplay", character: "Yor (Spy x Family)", event: "Private Studio Shoot",
-    type: "Studio shoot",
-  },
-  {
-    src: "Assets/images/portfolio/DSC09272-Edit-Edit-nowatermark.jpg",
-    alt: "EDIT ME: describe the character and scene",
-    w: 5699, h: 3799,
-    cosplayer: "@goldberry.cosplay", character: "Yor (Spy x Family)", event: "Private Studio Shoot",
-    type: "Studio shoot",
-  },
-  {
-    src: "Assets/images/portfolio/DSC02035.jpg",
-    alt: "EDIT ME: describe the character and scene",
-    w: 5699, h: 3799,
-    cosplayer: "@menace.cosplay", character: "Haruko Haruhara (FLCL)", event: "Private Studio Shoot",
-    type: "Studio shoot",
   },
 ];
