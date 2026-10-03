@@ -233,4 +233,11 @@ const PORTFOLIO = [
     cosplayer: "@mirana_cos", character: "MC Dragon (Love and Deep Space)", event: "PixelMania 2k26",
     type: "Location Photoshoot",
   },
+  {
+    src: "Assets/images/portfolio/DSC04312-Edit-Edit.jpg",
+    alt: "EDIT ME: describe the character and scene",
+    w: 1800, h: 1200,
+    cosplayer: "@colourete", character: "Hatsune Miku (Vocaloid)", event: "Private Studio shoot",
+    type: "Studio shoot",
+  },
 ];
