@@ -129,6 +129,13 @@ const PORTFOLIO = [
     type: "Studio shoot",
   },
   {
+    src: "Assets/images/portfolio/DSC04867-Edit-Edit.jpg",
+    alt: "EDIT ME: describe the character and scene",
+    w: 1200, h: 1800,
+    cosplayer: "@/ameriix_cos", character: "Asuka Langley Soryu (Evangelion)", event: "Private Studio shoot",
+    type: "Studio shoot",
+  },
+  {
     src: "Assets/images/portfolio/DSC09453-Edit-Edit-nowatermark.jpg",
     alt: "EDIT ME: describe the character and scene",
     w: 3827, h: 5740,
@@ -234,9 +241,9 @@ const PORTFOLIO = [
     type: "Location Photoshoot",
   },
   {
-    src: "Assets/images/portfolio/DSC04312-Edit-Edit.jpg",
+    src: "Assets/images/portfolio/DSC04321-Edit-Edit.jpg",
     alt: "EDIT ME: describe the character and scene",
-    w: 1800, h: 1200,
+    w: 1200, h: 1800,
     cosplayer: "@colourete", character: "Hatsune Miku (Vocaloid)", event: "Private Studio shoot",
     type: "Studio shoot",
   },
